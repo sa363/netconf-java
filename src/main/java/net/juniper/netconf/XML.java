@@ -89,7 +89,7 @@ public class XML {
      *           The text value of the element to be appended
      * @return The modified XML after appending the element.
      */
-    XML append(String element, String text) {
+    public XML append(String element, String text) {
         Element newElement = ownerDoc.createElement(element);
         Node textNode = ownerDoc.createTextNode(text);
         newElement.appendChild(textNode);
@@ -121,7 +121,7 @@ public class XML {
      *         The hashmap, each entry containing element name as the key and
      *         text value as the key value.
      */
-    void append(HashMap map) {
+    public void append(HashMap map) {
         List keyList = new ArrayList(map.keySet());
         for (Object element : keyList) {
             String elementName = (String) element;
